@@ -2,6 +2,8 @@ Module 5 Project
 
 For this project I have recreated a simplistic version of Crunchyroll, featuring
 
+The Genre 'Table' is in the Dropdown for Browse
+
 their large carrousel and cards for choosing a show.
 
 Bootstrap Components
