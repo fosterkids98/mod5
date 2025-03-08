@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script> 
+        document.title = "Crunchyroll: Watch Popular Anime,\n Play Games & Shop Online";
+    </script>
+</head>
+<body style="background-color: black;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2d2d2d;">
+        <!-- Hamburger Icon for Small Screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <a class="navbar-brand" href="#" style="color: #F47521; padding-left: 20px;">
+            <img src="https://cdn.worldvectorlogo.com/logos/crunchyroll-1.svg" alt="" style="height: 40px; width: 130px;">
+        </a>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="dropdownBrowse" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownBrowse">
+                        <div class="row" style="display: flex;">
+                            <!-- Browse options -->
+                            <div class="col-6">
+                                <a class="dropdown-item" href="#">Browse All (A-Z)</a>
+                                <a class="dropdown-item" href="#">Release Calender</a>
+                                <a class="dropdown-item" href="#">Music Videos & Concerts</a>
+                            </div>
+    
+                            <!-- Genre Table -->
+                            <div class="col-6">
+                                <table class="table table-dark table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Genre</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#" class="dropdown-item">Action</a></td>
+                                            <td><a href="#" class="dropdown-item">Music</a></td>
+                                            <td><a href="#" class="dropdown-item">Shonen</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="dropdown-item">Adventure</a></td>
+                                            <td><a href="#" class="dropdown-item">Romance</a></td>
+                                            <td><a href="#" class="dropdown-item">Slice Of Life</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="dropdown-item">Comedy</a></td>
+                                            <td><a href="#" class="dropdown-item">Sci-Fi</a></td>
+                                            <td><a href="#" class="dropdown-item">Sports</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="dropdown-item">Fantasy</a></td>
+                                            <td><a href="#" class="dropdown-item">Seinen</a></td>
+                                            <td><a href="#" class="dropdown-item">Supernatural</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="dropdown-item">Drama</a></td>
+                                            <td><a href="#" class="dropdown-item">Shojo</a></td>
+                                            <td><a href="#" class="dropdown-item">Thriller</a></td>
+                                        </tr>                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding-left: 25px; color: #fff;">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding-left: 15px; color: #fff;">Store</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="dropdownBrowse" data-bs-toggle="dropdown" aria-expanded="false">News</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownBrowse">
+                        <a class="dropdown-item" href="#">All News</a>
+                        <a class="dropdown-item" href="#">Anime Awards</a>
+                        <a class="dropdown-item" href="#">Events & Experiences</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Right-side icons (Search and Profile) -->
+        <div class="d-flex align-items-center ms-auto">
+            <!-- Search Icon -->
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="bi bi-search"></i>
+            </button>
+    
+            <!-- Profile Icon with Dropdown -->
+            <div class="dropdown">
+                <button class="btn text-white dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                    <li><a class="dropdown-item" href="login-signup.html">Log in/Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="search-input" class="form-control" placeholder="Search...">
+                    <ul id="results-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<main>
+    <!-- Carousel Section -->
+    <div id="hero" class="carousel slide carousel-indicators" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#hero" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#hero" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="https://i.redd.it/tnx1wfvi1t131.jpg" class="w-100 d-block" alt="First slide" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images5.alphacoders.com/135/1351644.png" class="w-100 d-block" alt="Second slide" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://wallpapers-clan.com/wp-content/uploads/2025/02/demon-slayer-tanjiro-kamado-pixel-desktop-wallpaper-cover.jpg" class="w-100 d-block" alt="Third slide" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container cardcont" id="shows">
+        <div class="scroll-container">
+            <select id="categoryFilter" onchange="filterCards(this.value)" style="margin-bottom: 10%;">
+                <option value="">All</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Comedy">Comedy</Code></option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Sports">Sports</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Drama">Drama</option>
+            </select>
+            <div class="card border shadow-sm" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/663/716/small/calming-anime-background-high-quality-free-photo.jpg');">
+                <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <h6 class="card-category">Action</h6>
+                    <p class="card-text">Description of card 1.</p>
+                </div>
+            </div>
+            <div class="card border shadow-sm" style="background-image: url('https://t4.ftcdn.net/jpg/02/97/79/83/360_F_297798377_VB9egqGnRKcZxU53wybEHLRnnTrcvlAH.jpg');">
+                <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <h6 class="card-category">Adventure</h6>
+                    <p class="card-text">Description of card 2.</p>
+                </div>
+            </div>
+            <div class="card border shadow-sm" style="background-image: url('https://wallpapers-clan.com/wp-content/uploads/2025/02/demon-slayer-tanjiro-kamado-pixel-desktop-wallpaper-cover.jpg');">
+                <div class="card-body">
+                    <h5 class="card-title">Card 3</h5>
+                    <h6 class="card-category">Thhriller, Adventure</h6>
+                    <p class="card-text">Description of card 3.</p>
+                </div>
+            </div>
+            <div class="card border shadow-sm" style="background-image: url('https://images5.alphacoders.com/135/1351644.png');">
+                <div class="card-body">
+                    <h5 class="card-title">Card 4</h5>
+                    <h6 class="card-category">Romance, Comedy</h6>
+                    <p class="card-text">Description of card 4.</p>
+                </div>
+            </div>
+            <div class="card border shadow-sm" style="background-image: url('https://i.redd.it/tnx1wfvi1t131.jpg"');">
+                <div class="card-body">
+                    <h5 class="card-title">Card 5</h5>
+                    <h6 class="card-category">Action, Adventure, Fantasy</h6>
+                    <p class="card-text">Description of card 5.</p>
+                </div>
+            </div>
+            <div class="card border shadow-sm" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/032/474/464/small_2x/sakura-garden-during-spring-time-visual-novel-anime-manga-background-wallpaper-photo.jpg');">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 6</h5>
+                        <h6 class="card-category">Sci-Fi</h6>
+                        <p class="card-text">Description of card 6.</p>
+                    </div>
+                </div>
+                <div class="card border shadow-sm" style="background-image: url('https://cdn.myanimelist.net/s/common/uploaded_files/1481780106-c10a4942c77d5d02a562cf5d3698423d.jpeg');">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 7</h5>
+                        <h6 class="card-category">Drama, Sports</h6>
+                        <p class="card-text">Description of card 7.</p>
+                    </div>
+                </div>
+                <div class="card border shadow-sm" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZU4cqrT7j5rTgiALWWSnaKHrNPQmA02ncjA&s');">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 8</h5>
+                        <h6 class="card-category">Sports, Romance, Comedy</h6>
+                        <p class="card-text">Description of card 8.</p>
+                    </div>
+                </div>
+                <div class="card border shadow-sm" style="background-image: url('https://japantoday-asset.scdn3.secure.raxcdn.com/img/store/b7/db/6ec3544cd26f490753159849af1c75dcb198/anime/_w850.jpg');">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 9</h5>
+                        <h6 class="card-category">Action, Adventure. Sci-Fi</h6>
+                        <p class="card-text">Description of card 9.</p>
+                    </div>
+                </div>
+                <div class="card border shadow-sm" style="background-image: url('https://www.shutterstock.com/image-illustration/anime-kimono-castle-background-600nw-2076246934.jpg');">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 10</h5>
+                        <h6 class="card-category">Sci-Fi. Romance</h6>
+                        <p class="card-text">Description of card 10.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
