@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Log In</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <title>Crunchyroll</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="background-color: black;">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2d2d2d;">
+                <!-- Hamburger Icon for Small Screens -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <a class="navbar-brand" href="index.html" style="color: #F47521; padding-left: 20px;">
+                    <img src="https://cdn.worldvectorlogo.com/logos/crunchyroll-1.svg" alt="" style="height: 40px; width: 130px;">
+                </a>
+            
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="dropdownBrowse" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownBrowse">
+                                <div class="row" style="display: flex;">
+                                    <!-- Browse options -->
+                                    <div class="col-6">
+                                        <a class="dropdown-item" href="#">Browse All (A-Z)</a>
+                                        <a class="dropdown-item" href="#">Release Calender</a>
+                                        <a class="dropdown-item" href="#">Music Videos & Concerts</a>
+                                    </div>
+            
+                                    <!-- Genre Table -->
+                                    <div class="col-6">
+                                        <table class="table table-dark table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Genre</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="#" class="dropdown-item">Action</a></td>
+                                                    <td><a href="#" class="dropdown-item">Music</a></td>
+                                                    <td><a href="#" class="dropdown-item">Shonen</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#" class="dropdown-item">Adventure</a></td>
+                                                    <td><a href="#" class="dropdown-item">Romance</a></td>
+                                                    <td><a href="#" class="dropdown-item">Slice Of Life</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#" class="dropdown-item">Comedy</a></td>
+                                                    <td><a href="#" class="dropdown-item">Sci-Fi</a></td>
+                                                    <td><a href="#" class="dropdown-item">Sports</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#" class="dropdown-item">Fantasy</a></td>
+                                                    <td><a href="#" class="dropdown-item">Seinen</a></td>
+                                                    <td><a href="#" class="dropdown-item">Supernatural</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#" class="dropdown-item">Drama</a></td>
+                                                    <td><a href="#" class="dropdown-item">Shojo</a></td>
+                                                    <td><a href="#" class="dropdown-item">Thriller</a></td>
+                                                </tr>                                        
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="padding-left: 25px; color: #fff;">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="padding-left: 15px; color: #fff;">Store</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color: #fff;" href="#" id="dropdownBrowse" data-bs-toggle="dropdown" aria-expanded="false">News</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownBrowse">
+                                <a class="dropdown-item" href="#">All News</a>
+                                <a class="dropdown-item" href="#">Anime Awards</a>
+                                <a class="dropdown-item" href="#">Events & Experiences</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            
+                <!-- Right-side icons (Search and Profile) -->
+                <div class="d-flex align-items-center ms-auto">
+                    <!-- Search Icon -->
+                    <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                    </button>
+            
+                    <!-- Profile Icon with Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn text-white dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="login-signup.html">Log In/Sign up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search Modal -->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="search-input" class="form-control" placeholder="Search...">
+                            <ul id="results-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1 style="text-align: center; color: #fff; margin-top: 3%; font-size: 26pt;">Log In</h1>
+            <fieldset class="login ">
+                <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        name=""
+                        id="email"
+                        aria-describedby="emailHelpId"
+                        placeholder="Email"
+                    />
+                    <small id="emailHelpId" class="form-text text-muted"
+                        ></small>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        name=""
+                        id="password"
+                        placeholder="Password"
+                    />
+                </div>
+                
+            </fieldset>
+            
+            <button
+                type="submit"
+                class="btn btn-dark login_btn"
+                onclick="validateLogin(event)"
+            >        
+                Log In    
+            </button>        
+
+            <h2 style="text-align: center; color: #fff; font-size: medium; margin-top: 2%;">No Account? 
+                <a href="#" style="color: #F47521; text-decoration: none;" 
+                data-bs-toggle="modal" data-bs-target="#createAccountModal">CREATE ONE</a>
+              </h2>
+            
+              <!-- Create Account Modal -->
+            <div class="modal fade" id="createAccountModal" tabindex="-1" 
+            aria-labelledby="createAccountModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="createAccountModalLabel">Create Your Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="createAccountForm">
+                                <div class="mb-3">
+                                    <label for="createEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="createEmail" placeholder="Enter your email">
+                                    <small id="createEmailHelpId" class="form-text text-muted"></small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="createPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="createPassword" placeholder="Enter your password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-dark" onclick="createAccount()">Create Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>
